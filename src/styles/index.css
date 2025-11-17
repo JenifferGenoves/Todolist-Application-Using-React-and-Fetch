@@ -1,11 +1,123 @@
-/* 
+.todo-container {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px 20px 10px 20px;
+  background: #F9F2F1;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+.todo-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #d09d8f;
+}
 
-*/
+input::placeholder {
+  color: #ead4ce;
+}
+
+.todo-input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.todo-input:focus {
+  outline: none;
+  border-color: #ba705c; 
+}
+
+.todo-list {
+    list-style: none;   
+    padding: 0;
+    margin-top: 25px;
+}
+
+.todo-item {
+  position: relative;     
+  padding: 12px 40px 12px 12px; 
+  background: #f6edeb;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  transition: 0.3s ease;
+  text-align: left;
+  color: #6d3b2e;
+}
+
+.todo-item:hover {
+  background: #f4e8e5;
+}
+
+.delete-btn {
+  position: absolute;
+  top: 0.5px;
+  right: 8px;
+  margin-left: auto;
+  background: transparent;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 4px;
+  transition: 0.2s;
+  color: #a05844;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.todo-item:hover .delete-btn {
+  opacity: 1;                 /*  Visible */
+  pointer-events: auto;       /*  Clickeable */
+  transform: scale(1.1);
+}
+
+.delete-btn:hover {
+  transform: scale(1.2);
+}
+
+.empty-message {
+  color: #c88e7e;
+}
+
+.task-counter {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #ead4ce;
+  text-align: left;
+}
+
+
+/* Contenedor para el contador + botón */
+.task-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  padding: 0 4px;
+}
+
+/* Botón pequeñito y que combine */
+.deleteTotal-btn {
+  padding: 6px 10px;
+  font-size: 12px;
+  background-color: #e8c7c0;
+  color: #a05844;
+  border: 1px solid #e3bab1;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.deleteTotal-btn :hover {
+  background-color: #e2b2a7;
+  color: #6d3b2e;
+  transform: scale(1.05);
+}
+
+.deleteTotal-btn :active {
+  transform: scale(0.97);
+}
